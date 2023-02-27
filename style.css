@@ -45,6 +45,13 @@ footer {
 h1 {
   font-size: 1rem;
   font-weight: 500;
+  background-color: #2A5196;
+}
+
+h2 {
+  letter-spacing: 1.5px;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 h2,
@@ -52,7 +59,6 @@ h4 {
   font-weight: 500;
 }
 
-h2,
 h3 {
   font-size: 1.8rem;
 }
@@ -74,17 +80,33 @@ h5 {
 h1,
 h2 {
   color: rgb(255, 255, 255);
-  background-color: #2A5196;
+}
+
+header {
+  height: 50px;
+}
+
+/* hide SKIP LINK TO MAIN CONTENT */
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    z-index: 10;
+    background: #fff;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+/* display skip link to main focus when tabbing */
+.skipLink:focus {
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 130px;
 }
 
 /* summary text */
 .summary p {
   margin-top: 5px;
-}
-
-/* footer */
-footer {
-  margin-top: 100px;
 }
 
 /* navigation menu */
@@ -144,11 +166,53 @@ footer {
   margin: 0;
 }
 
+/* absolute positioning text and image */
+.imgContainer {
+  position: relative;
+  z-index: -10;
+}
+
+.headingContainer {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.headingContainer h2:first-child {
+  margin-bottom: 0;
+}
+
+.headingContainer h2:last-child {
+  margin-top: 0;
+}
+
+br {
+  font-size: xx-small;
+}
+
+/* footer */
+footer {
+  margin: 100px 0 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
 /* media query */
 /* 1200px breakpoint (small laptop) */
 @media (max-width: 1200px) {
   .wrapper {
     width: 100%;
+  }
+  .adventures {
+    margin: 0 40px;
+  }
+  .adventures h3 {
+    border-bottom: 1px solid rgb(164, 162, 162);
+    padding-bottom: 15px;
   }
 }
 
@@ -161,5 +225,24 @@ footer {
   /* smaller burger icon */
   .burgerButton {
     width: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .headingContainer {
+    top: 25%;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .headingContainer {
+    top: 25%;
+  }
+  h2 {
+    line-height: 0.5;
+    font-size: 1.5rem;
   }
 }
