@@ -91,8 +91,11 @@ footer {
 .mainNav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
   align-items: center;
   background-color: #2A5196;
+  box-shadow: 0 10px 20px #000;
 }
 /* burger icon */
 .burgerButton,
@@ -104,11 +107,41 @@ footer {
 
 .burgerButton {
   margin-left: 10px;
-  width: 45px
+  width: 45px;
+  cursor: pointer;
 }
 
 .logoContainer {
   margin-right: 7.5px;
+}
+
+/* hidden side nav */
+.sideNavHidden {
+  display: none;
+}
+/* styling for when side nav active */
+.sideNavActive {
+  background-color: #2A5196;
+  width: fit-content;
+  height: 100%;
+  /* width: 250px; */
+  position: fixed;
+  /* z-index to overlay rest of page */
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  padding: 20px 20px 0 20px;
+  color: rgb(255, 255, 255);
+  line-height: 2;
+  /* unset display to make it appear/overwrite none */
+  display: unset;
+}
+
+.sideNavActive ul {
+  margin: 0;
 }
 
 /* media query */
