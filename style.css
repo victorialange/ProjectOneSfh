@@ -59,7 +59,7 @@ h3 {
 
 /* adventures headings halifax, sydney */
 h4 {
-  color: green;
+  color: #3d5f3a;
   text-decoration: underline;
   font-size: 1.2rem;
 }
@@ -69,6 +69,12 @@ h5 {
   font-size: 1.1rem;
   margin-bottom: 0;
   margin-top: 20px;
+}
+
+h1,
+h2 {
+  color: rgb(255, 255, 255);
+  background-color: #2A5196;
 }
 
 /* summary text */
@@ -81,9 +87,46 @@ footer {
   margin-top: 100px;
 }
 
+/* navigation menu */
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2A5196;
+}
+/* burger icon */
+.burgerButton,
+.logoContainer {
+  background-color: #2A5196;
+  border: none;
+  width: 50px;
+}
+
+.burgerButton {
+  margin-left: 10px;
+  width: 45px
+}
+
+.logoContainer {
+  margin-right: 7.5px;
+}
+
 /* media query */
+/* 1200px breakpoint (small laptop) */
 @media (max-width: 1200px) {
   .wrapper {
     width: 100%;
+  }
+}
+
+/* 800px breakpoint (tablet) */
+@media (max-width: 800px) {
+  /* smaller font size */
+  html {
+    font-size: 100%;
+  }
+  /* smaller burger icon */
+  .burgerButton {
+    width: 40px;
   }
 }
