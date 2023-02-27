@@ -101,7 +101,7 @@ header {
     left: 0;
     right: 0;
     text-align: center;
-    top: 130px;
+    top: 70px;
 }
 
 /* summary text */
@@ -234,6 +234,9 @@ footer p {
   }
   h2 {
     font-size: 1.8rem;
+  }
+  .adventures {
+    margin: 0 20px;
   }
 }
 
